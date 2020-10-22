@@ -307,42 +307,11 @@ span {
 .post:last-child {
     margin-bottom: 64px;
 }
-.post::before {
-    content: "";
-    width: 381px;
-    height: 300px;
-    padding-right: 30px;
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: auto 300px;
-    z-index: 2;
+.post-media {
+    margin-right: 30px;
 }
-.post-img1::before {
-    background-image: url("../images/last-post1.jpg");
-}
-.post-img2::before {
-    background-image: url("../images/last-post2.jpg");
-}
-.post-img3::before {
-    background-image: url("../images/last-post3.jpg");
-}
-.post-img4::before {
-    background-image: url("../images/last-post4.jpg");
-}
-.post-img5::before {
-    background-image: url("../images/last-post5.jpg");
-}
-.hidden-img-title {
-    position: absolute;
-    box-sizing: border-box;
-    border: 5px solid #ededed;
-    width: 381px;
-    height: 294px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 0;
+.post-media-img {
+    width: 380px;
 }
 .post-info {
     width: 367px;
@@ -421,45 +390,33 @@ span {
         width: 367px;
         padding-top: 15px;
     }
-    .post::before {
-        content: "";
-        width: 391px;
-        height: 300px;
-        padding-right: 0;
-        display: flex;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        z-index: 1;
-    }
 }
 @media (max-width: 768px) {
     .main {
         flex-wrap: wrap;
     }
     .post-list {
+        width: 100%;
         display: block;
-        width: 330px;
         margin-right: 0;
-        padding-left: 50px;
-        padding-right: 50px;
+
+
     }
     .post-info {
-        width: 330px;
+        width: 100%;
         padding-top: 15px;
+        margin-right: auto;
+        margin-left: auto;
     }
-    .post::before {
-        content: "";
-        width: 330px;
-        height: 256px;
-        padding-right: 0;
-        display: flex;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        z-index: 1;
+    .post-media {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
-    .hidden-img-title {
-        width: 330px;
-        height: 256px;
+    .post-media-img {
+        width: 100%;
+
+        margin: 0;
     }
 }
 
@@ -495,42 +452,8 @@ span {
 .aside-post:last-of-type {
     margin-bottom: 60px;
 }
-.aside-post::before {
-    content: "";
-    width: 72px;
-    height: 72px;
+.aside-post-media {
     padding-right: 20px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    z-index: 2;
-}
-.aside-post-img1::before {
-    background-image: url("../images/2.jpg");
-}
-.aside-post-img2::before {
-    background-image: url("../images/151.jpg");
-}
-.aside-post-img3::before {
-    background-image: url("../images/45.jpg");
-}
-.aside-post-img4::before {
-    background-image: url("../images/501.jpg");
-}
-.aside-post-img5::before {
-    background-image: url("../images/7.jpg");
-}
-.aside-hidden-img-title {
-    position: absolute;
-    box-sizing: border-box;
-    border: 2px solid #ededed;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    font-size: 6px;
-    text-align: center;
 }
 .aside-post-info {
     box-sizing: border-box;
@@ -687,9 +610,11 @@ span {
 
 .footer {
     padding-top: 25px;
-    width: 100%;
+    width: 1170px;
     height: 210px;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
 }
 .widget {
     display: flex;
@@ -854,6 +779,9 @@ span {
     .aside-product {
         width: 29%;
     }
+    .footer {
+        width: 1170px;
+    }
 }
 @media (max-width: 1199px) {
     .aside-products {
@@ -871,6 +799,9 @@ span {
         font-size: 17px;
         line-height: 22px;
     }
+    .footer {
+        width: 700px;
+    }
 }
 @media (max-width: 768px) {
     .aside-products {
@@ -887,10 +818,13 @@ span {
         line-height: 22px;
     }
     .aside {
-        width: 330px;
+        width: 100%;
     }
     .aside-post-info {
-        width: 240px;
+        width: 80%;
+    }
+    .aside-post-media {
+        width: 60px;
     }
     .aside-tag:last-child {
         margin-bottom: 60px;
@@ -898,6 +832,9 @@ span {
 
     .aside-post::before {
         padding-right: 10px;
+    }
+    .footer {
+        width: 100%;
     }
 }
 
